@@ -1,11 +1,5 @@
 This is 0x19. C - Stacks, Queues - LIFO, FIFO
 
-Resources
-Read or watch:
-https://intranet.alxswe.com/rltoken/0KVWTdE8xXy__jUfBfakCw
-https://intranet.alxswe.com/rltoken/udmomL4F4mF630D2Z-ltqg
-https://intranet.alxswe.com/rltoken/fj_-SJXW-pWxgAnstsARoQ
-https://intranet.alxswe.com/rltoken/6Y_GVoIH_rV45xd7w0a9FA
 
 Learning Objectives
 
@@ -19,21 +13,87 @@ What is a queue, and when to use it
 What are the common implementations of stacks and queues
 What are the most common use cases of stacks and queues
 What is the proper way to use global variables
+Resources
+Read or watch:
+
+https://intranet.alxswe.com/rltoken/0KVWTdE8xXy__jUfBfakCw
+
+https://intranet.alxswe.com/rltoken/udmomL4F4mF630D2Z-ltqg
+
+https://intranet.alxswe.com/rltoken/fj_-SJXW-pWxgAnstsARoQ
+
+https://intranet.alxswe.com/rltoken/6Y_GVoIH_rV45xd7w0a9FA
+
 
 Requirements
+
 General
+
 Allowed editors: vi, vim, emacs
+
 All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=c89
 All your files should end with a new line
 A README.md file, at the root of the folder of the project is mandatory
 Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
 You allowed to use a maximum of one global variable
 No more than 5 functions per file
+
 You are allowed to use the C standard library
 The prototypes of all your functions should be included in your header file called monty.h
 Don’t forget to push your header file
 All your header files should be include guarded
 You are expected to do the tasks in the order shown in the project
+
+
+questions
+Great! You've completed the quiz successfully! Keep going! (Hide quiz)
+Question #0
+What’s the command used to add a new element to a stack?
+
+
+push
+
+
+pop
+
+Question #1
+Which of these stacks are reversing the order of insertion? (select all possible answers)
+
+
+FIFO
+
+
+FILO
+
+
+LIFO
+
+
+LILO
+
+Question #2
+Which of these stacks are keeping the order of insertion? (select all possible answers)
+
+
+FIFO
+
+
+FILO
+
+
+LIFO
+
+
+LILO
+
+Question #3
+What’s the command used to remove a new element from a stack?
+
+
+push
+
+
+pop
 
 GitHub
 There should be one project repository per group. If you clone/fork/whatever a project repository with the same name before the second deadline, you risk a 0% score.
@@ -644,54 +704,4 @@ Repo:
 
 GitHub repository: monty
 Directory: bf
-File: 1003-mul.bf
-   
-z questions
-Great! You've completed the quiz successfully! Keep going! (Hide quiz)
-Question #0
-What’s the command used to add a new element to a stack?
-
-
-push
-
-
-pop
-
-Question #1
-Which of these stacks are reversing the order of insertion? (select all possible answers)
-
-
-FIFO
-
-
-FILO
-
-
-LIFO
-
-
-LILO
-
-Question #2
-Which of these stacks are keeping the order of insertion? (select all possible answers)
-
-
-FIFO
-
-
-FILO
-
-
-LIFO
-
-
-LILO
-
-Question #3
-What’s the command used to remove a new element from a stack?
-
-
-push
-
-
-pop
+File: 1003-mul.b

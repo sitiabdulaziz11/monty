@@ -44,11 +44,13 @@ void push(stack_t **stack, unsigned int line_number)
 /**
  * pall - print or display elements in the stack.
  * @stack: doubly linked list.
+ * @linen: line number.
  */
-void pall(stack_t **stack)
+void pall(stack_t **stack, unsigned int linen)
 {
 	stack_t *currt;
 
+	(void)linen;
 	currt = *stack;
 	while (currt)
 	{

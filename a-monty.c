@@ -1,13 +1,16 @@
 #include "monty.h"
 
+
+void fun(void);
+stack_t *stack = NULL;
+
 /**
  * main - Entry point.
  * @ac: argument count.
  * @av: argument vector.
  *
  * Return: 0
- */
-stack_t *stack = NULL;
+*/
 
 int main(int ac, char *av[])
 {

@@ -26,14 +26,14 @@ int main(int ac, char *av[])
 
 	if (ac != 2)
 	{
-		printf("USAGE: %s file\n", av[0]);
+		fprintf(stderr, "USAGE: %s file\n", av[0]);
 		exit(EXIT_FAILURE);
 	}
 
 	fd = fopen(av[1], "r");
 	if (!fd)
 	{
-		printf("Error: Can't open file %s\n", av[1]);
+		fprintf(stderr, "Error: Can't open file %s\n", av[1]);
 		exit(EXIT_FAILURE);
 	}
 
@@ -54,7 +54,7 @@ int main(int ac, char *av[])
 			}
 			if (!fond)
 			{
-				printf("L%u: unknown instruction %s\n", linen, opcode);
+				fprintf(stderr, "L%u: unknown instruction %s\n", linen, opcode);
 				free(line);
 				fclose(fd);
 				exit(EXIT_FAILURE);

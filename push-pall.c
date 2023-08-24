@@ -14,7 +14,7 @@ void push(stack_t **stack, unsigned int line_number)
 	argmnt = strtok(NULL, " \t\n");
 	if (!argmnt)
 	{
-		printf("L%u: usage: push integer\n", line_number);
+		printf(stderr, "L%u: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 
@@ -22,7 +22,7 @@ void push(stack_t **stack, unsigned int line_number)
 
 	if (val == 0 && strcmp(argmnt, "0") != 0)
 	{
-		printf("L%u: usage: push integer\n", line_number);
+		printf(stderr, "L%u: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 

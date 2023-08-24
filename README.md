@@ -1,12 +1,5 @@
 This is 0x19. C - Stacks, Queues - LIFO, FIFO
 
-Resources
-Read or watch:
-
-https://intranet.alxswe.com/rltoken/0KVWTdE8xXy__jUfBfakCw
-https://intranet.alxswe.com/rltoken/udmomL4F4mF630D2Z-ltqg
-https://intranet.alxswe.com/rltoken/fj_-SJXW-pWxgAnstsARoQ
-https://intranet.alxswe.com/rltoken/6Y_GVoIH_rV45xd7w0a9FA
 
 Learning Objectives
 
@@ -20,6 +13,17 @@ What is a queue, and when to use it
 What are the common implementations of stacks and queues
 What are the most common use cases of stacks and queues
 What is the proper way to use global variables
+Resources
+Read or watch:
+
+https://intranet.alxswe.com/rltoken/0KVWTdE8xXy__jUfBfakCw
+
+https://intranet.alxswe.com/rltoken/udmomL4F4mF630D2Z-ltqg
+
+https://intranet.alxswe.com/rltoken/fj_-SJXW-pWxgAnstsARoQ
+
+https://intranet.alxswe.com/rltoken/6Y_GVoIH_rV45xd7w0a9FA
+
 
 Requirements
 

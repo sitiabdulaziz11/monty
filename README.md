@@ -2,6 +2,7 @@ This is 0x19. C - Stacks, Queues - LIFO, FIFO
 
 Resources
 Read or watch:
+
 https://intranet.alxswe.com/rltoken/0KVWTdE8xXy__jUfBfakCw
 https://intranet.alxswe.com/rltoken/udmomL4F4mF630D2Z-ltqg
 https://intranet.alxswe.com/rltoken/fj_-SJXW-pWxgAnstsARoQ

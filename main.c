@@ -1,6 +1,6 @@
 #define _POSIX_C_SOURCE 200809L
 #include "monty.h"
-
+void fun(void);
 instruction_t opcd[] = {
 	{"push", push},
 	{"pall", pall},
@@ -19,7 +19,7 @@ int main(int ac, char *av[])
 	int i, fond;
 	FILE *fd;
 	stack_t *stack;
-	char *line = NULL, *opcode;
+	char *line = NULL, *ptr;
 	unsigned int linen = 1;
 	size_t linel = 0;
 
@@ -36,15 +36,16 @@ int main(int ac, char *av[])
 		exit(EXIT_FAILURE);
 	}
 
+	stack = NULL;
 	while (getline(&line, &linel, fd) != -1)
 	{
-		opcode = strtok(line, " \t\n");
-		if (opcode)
+		ptr = strtok(line, " \t\n");
+		if (ptr)
 		{
 			fond = 0;
 			for (i = 0; opcd[i].opcode != NULL; i++)
 			{
-				if (strcmp(opcd[i].opcode, opcode) == 0)
+				if (strcmp(opcd[i].opcode, ptr) == 0)
 				{
 					fond = 1;
 					opcd[i].f(&stack, linen);
@@ -53,7 +54,7 @@ int main(int ac, char *av[])
 			}
 			if (!fond)
 			{
-				fprintf(stderr, "L%u: unknown instruction %s\n", linen, opcode);
+				fprintf(stderr, "L%u: unknown instruction %s\n", linen, ptr);
 				free(line);
 				fclose(fd);
 				exit(EXIT_FAILURE);

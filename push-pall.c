@@ -54,7 +54,7 @@ void pall(stack_t **stack, unsigned int linen)
 	currt = *stack;
 	while (currt)
 	{
-		printf("%d\n", currt->n);
+		fprintf(stdout, "%d\n", currt->n);
 		currt = currt->next;
 	}
 }

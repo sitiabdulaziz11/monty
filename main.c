@@ -1,8 +1,6 @@
 #define _POSIX_C_SOURCE 200809L
 #include "monty.h"
 
-void fun(void);
-stack_t *stack = NULL;
 instruction_t opcd[] = {
 	{"push", push},
 	{"pall", pall},
@@ -20,6 +18,7 @@ int main(int ac, char *av[])
 {
 	int i, fond;
 	FILE *fd;
+	stack_t *stack;
 	char *line = NULL, *opcode;
 	unsigned int linen = 1;
 	size_t linel = 0;

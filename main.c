@@ -20,7 +20,7 @@ int main(int ac, char *av[])
 {
 	int i, fond;
 	FILE *fd;
-	char *line = NULL, *ptr;
+	char *line = NULL, *opcode;
 	unsigned int linen = 1;
 	size_t linel = 0;
 
@@ -39,13 +39,13 @@ int main(int ac, char *av[])
 
 	while (getline(&line, &linel, fd) != -1)
 	{
-		ptr = strtok(line, " \t\n");
-		if (ptr)
+		opcode = strtok(line, " \t\n");
+		if (opcode)
 		{
 			fond = 0;
 			for (i = 0; opcd[i].opcode != NULL; i++)
 			{
-				if (strcmp(opcd[i].opcode, ptr) == 0)
+				if (strcmp(opcd[i].opcode, opcode) == 0)
 				{
 					fond = 1;
 					opcd[i].f(&stack, linen);
@@ -54,7 +54,7 @@ int main(int ac, char *av[])
 			}
 			if (!fond)
 			{
-				printf("L%u: unknown instruction %s\n", linen, ptr);
+				printf("L%u: unknown instruction %s\n", linen, opcode);
 				free(line);
 				fclose(fd);
 				exit(EXIT_FAILURE);

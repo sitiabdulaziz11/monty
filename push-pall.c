@@ -14,7 +14,7 @@ void push(stack_t **stack, unsigned int line_number)
 	argmnt = strtok(NULL, " \t\n");
 	if (!argmnt)
 	{
-		printf(stderr, "L%u: usage: push integer\n", line_number);
+		fprintf(stderr, "L%u: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 
@@ -22,14 +22,14 @@ void push(stack_t **stack, unsigned int line_number)
 
 	if (val == 0 && strcmp(argmnt, "0") != 0)
 	{
-		printf(stderr, "L%u: usage: push integer\n", line_number);
+		fprintf(stderr, "L%u: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 
 	newn = malloc(sizeof(stack_t));
 	if (newn == NULL)
 	{
-		printf("Error: malloc failed\n");
+		fprintf(stderr, "Error: malloc failed\n");
 		exit(EXIT_FAILURE);
 	}
 

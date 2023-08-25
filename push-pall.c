@@ -30,11 +30,11 @@ void push(stack_t **stack, unsigned int line_number)
 	newn->n = val;
 	newn->prev = NULL;
 	newn->next = *stack;
-
 	if (*stack)
 		(*stack)->prev = newn;
 	*stack = newn;
 }
+
 /**
  * pall - print or display elements in the stack.
  * @stack: doubly linked list.

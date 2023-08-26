@@ -59,8 +59,8 @@ int main(int ac, char *av[])
 				fclose(fd);
 				exit(EXIT_FAILURE);
 			}
-			linen++;
 		}
+		linen++;
 	}
 	free_instrcn(stack);
 	fclose(fd);

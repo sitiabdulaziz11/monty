@@ -18,12 +18,8 @@ void push(stack_t **stack, unsigned int line_number)
 		fprintf(stderr, "L%u: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
+	
 	val = atoi(argmnt);
-	if (val < '0' || val > '9')
-	{
-		fprintf(stderr, "L%u: usage: push integer\n", line_number);
-		exit(EXIT_FAILURE);
-	}
 
 	newn = malloc(sizeof(stack_t));
 	if (newn == NULL)

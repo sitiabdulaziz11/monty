@@ -33,7 +33,6 @@ void push(stack_t **stack, unsigned int line_number)
 	if (*stack)
 		(*stack)->prev = newn;
 	*stack = newn;
-	free(newn);
 }
 
 /**
@@ -52,4 +51,23 @@ void pall(stack_t **stack, unsigned int linen)
 		fprintf(stdout, "%d\n", currt->n);
 		currt = currt->next;
 	}
+	freefun(&currt);
 }
+/**
+ * freefun - function for freeing.
+ * @h: head
+ */
+void freefun(stack_t **h)
+{
+	stack_t *tmp, *ptr;
+
+	ptr = *h;
+	while (ptr)
+	{
+		tmp = ptr;
+		ptr = ptr->next;
+		free(tmp);
+	}
+	*h = NULL;
+}
+

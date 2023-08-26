@@ -33,6 +33,7 @@ void push(stack_t **stack, unsigned int line_number)
 	if (*stack)
 		(*stack)->prev = newn;
 	*stack = newn;
+	free(newn);
 }
 
 /**

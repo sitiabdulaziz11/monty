@@ -51,23 +51,20 @@ void pall(stack_t **stack, unsigned int linen)
 		fprintf(stdout, "%d\n", currt->n);
 		currt = currt->next;
 	}
-	freefun(&currt);
 }
 /**
- * freefun - function for freeing.
+ * free_instrcn - function for freeing.
  * @h: head
  */
-void freefun(stack_t **h)
+void free_instrcn(stack_t *h)
 {
-	stack_t *tmp, *ptr;
+	stack_t *ptr;
 
-	ptr = *h;
-	while (ptr)
+	while (h)
 	{
-		tmp = ptr;
-		ptr = ptr->next;
-		free(tmp);
+		ptr = h;
+		h = h->next;
+		free(ptr);
 	}
-	*h = NULL;
 }
 

@@ -62,7 +62,7 @@ int main(int ac, char *av[])
 		}
 		linen++;
 	}
-	freefun(&stack);
+	free_instrcn(stack);
 	fclose(fd);
 	return (EXIT_SUCCESS);
 }

@@ -12,13 +12,13 @@ void push(stack_t **stack, unsigned int line_number)
 	int val;
 
 	argmnt = strtok(NULL, " \t\n");
-	if (!argmnt)
+	val = atoi(argmnt);
+
+	if (!argmnt && !val)
 	{
 		fprintf(stderr, "L%u: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
-
-	val = atoi(argmnt);
 
 	newn = malloc(sizeof(stack_t));
 	if (newn == NULL)
@@ -51,6 +51,7 @@ void pall(stack_t **stack, unsigned int linen)
 		fprintf(stdout, "%d\n", currt->n);
 		currt = currt->next;
 	}
+	free(currt);
 }
 /**
  * free_instrcn - function for freeing.

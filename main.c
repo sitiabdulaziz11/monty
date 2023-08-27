@@ -4,6 +4,8 @@ void fun(void);
 instruction_t opcd[] = {
 	{"push", push},
 	{"pall", pall},
+	{"pint", pint},
+	{"pop", pop_fun},
 	{NULL, NULL}
 };
 

@@ -43,6 +43,8 @@ typedef struct instruction_s
 extern instruction_t opcd[];
 
 void push(stack_t **stack, unsigned int line_number);
+void pop_fun(stack_t **h, unsigned int linen);
+void pint(stack_t **head, unsigned int ln);
 void pall(stack_t **stack, unsigned int linen);
 void free_instrcn(stack_t *h);
 
